@@ -13,4 +13,8 @@ describe('Algorithm#anagrams') do
     new_algorithm = Algorithm.new()
     expect(new_algorithm.anagrams('RUBY', 'bury')).to(eq(4))
   end
+  it("Should return the number of letters inputs have in common, even if one of the inputs is upperrcase") do
+    new_algorithm = Algorithm.new()
+    expect(new_algorithm.anagrams('RBY', 'bury')).to(eq('not a num'))
+  end
 end
