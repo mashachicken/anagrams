@@ -9,17 +9,22 @@ class Algorithm
     vowels = ['a','e','i','o','u','A','E','I','O','U']
     @input = (@input.downcase).split('')
     @input2 = (@input2.downcase).split('')
-    @input.each do |l|
-      if vowels.include?(l)
-        puts "NOT A WORD"
-      if @input2.include?(l)
-        array.push(l)
-        puts "theese methods are anagrams"
-        puts array
+    vowels.each do |e|
+      if @input.include?(e) & @input2.include?(e)
+        output = true
+      else "not a word!"
       end
+      return output
+      puts output
     end
-    return array.length
-    # def if_vowels()
-
+    # if output == true
+    #   @input.each do |l|
+    #     if @input2.include?(l)
+    #       array.push(l)
+    #       puts array
+    #     end
+    #     return array.length
+    #   end
+    # end
   end
 end
