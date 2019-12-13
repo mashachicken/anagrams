@@ -1,24 +1,23 @@
 #!/usr/bin/env ruby
 class Algorithm
-  def anagrams(input, input2)
+  def initialize (input, input2)
+    @input = input
+    @input2 = input2
+  end
+  def anagrams()
     array = []
-    vowels = ['a','e','i','o','u','A','E','I','O','U']
-    input = (input.downcase).split('')
-    input2 = (input2.downcase).split('')
-    input.each do |l|
-      if input2.include?(l) & vowels.include?(l)
-        puts 'same letter'
+    @input = (@input.downcase).split('')
+    @input2 = (@input2.downcase).split('')
+    @input.each do |l|
+      if @input2.include?(l)
         array.push(l)
+        puts "theese methods are anagrams"
+        puts array
       end
-    unless vowels.include?(l)
-      puts 'not a number'
-      return "not a num"
-    end
-
-      puts array
     end
     return array.length
-    puts "theese methods are anagrams"
+    # def if_vowels()
+    #   vowels = ['a','e','i','o','u','A','E','I','O','U']
 
-    end
   end
+end
