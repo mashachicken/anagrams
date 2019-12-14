@@ -15,6 +15,6 @@ describe('Algorithm#anagrams') do
   end
   it("Should return not a word when no vowels") do
     new_algorithm = Algorithm.new('RBY', 'bry')
-    expect(new_algorithm.anagrams()).to(eq('not a word!'))
+    expect(new_algorithm.anagrams()).to(eq(nil))
   end
 end
