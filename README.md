@@ -1,8 +1,8 @@
-# _Super Galactic Age Calculator_
-#### A program that calculates the user's age for different planets in the solar system, 12.13.19
+# _Anagrams and Antigrams Check_
+#### A program that checks whether words are anagrams/antigrams, 12.13.19
 #### By Masha Ivy
 ## Description
-This program is going to take 2 user inputs, test them and return whether they're anagrams, antigrams or neither .
+This program is going to take 2 potential user inputs, test them and return whether they're anagrams, antigrams or neither. The program will ignore punctuation and white spaces. This project includes back-end logic only.
 ## Main Specs
 
 | Behavior       | Input         | Output  |
@@ -23,7 +23,7 @@ Feel free to contact me via my email:
 mashaivy9@gmail.com
 
 ## Technologies Used
-This website has been created using Ruby. For more information, dependencies and versions refer to my package.json file
+This website has been created using Ruby.
 
 ### License
 MIT license
