@@ -8,8 +8,8 @@ class Algorithm
     array = []
 
     vowels = ['a','e','i','o','u','A','E','I','O','U']
-    @input = (@input.downcase).split('')
-    @input2 = (@input2.downcase).split('')
+    @input = ((@input.downcase).gsub(/[\s,]/ ,"")).split('')
+    @input2 = ((@input2.downcase).gsub(/[\s,]/ ,"")).split('')
     @input.each do |l|
       if vowels.include?(l)
         @first_word = true
@@ -29,7 +29,12 @@ class Algorithm
           puts "heeloo"
         end
       end
-      return array.length
+      if array.length == @input.length && array.length == @input2.length
+        return true
+      elsif array.length == 0
+        return "antigram"
+      else return false
+      end
     end
   end
 end
