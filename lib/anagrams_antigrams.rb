@@ -6,7 +6,6 @@ class Algorithm
   end
   def anagrams()
     array = []
-
     vowels = ['a','e','i','o','u','A','E','I','O','U']
     @input = ((@input.downcase).gsub(/[\s,]/ ,"")).split('')
     @input2 = ((@input2.downcase).gsub(/[\s,]/ ,"")).split('')
@@ -21,19 +20,16 @@ class Algorithm
         @second_word = true
       end
     end
-
     if @first_word & @second_word == true
       @input.each do |l|
         if @input2.include?(l)
           array.push(l)
-          puts "heeloo"
         end
       end
       if array.length == @input.length && array.length == @input2.length
         return true
       elsif array.length == 0
         return "antigram"
-      else return false
       end
     end
   end
